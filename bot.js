@@ -107,7 +107,7 @@ m.sendMessage(args)
 });
 
  client.on('message', message => {
-    if (message.content.startsWith("link")) {
+    if (message.content.startsWith(prefix + "link")) {
         message.channel.createInvite({
         thing: true,
         maxUses: 5,
@@ -117,7 +117,7 @@ m.sendMessage(args)
     )
     const embed = new Discord.RichEmbed()
         .setColor("RANDOM")
-          .setDescription("The link was sent with a special message")
+          .setDescription("The link was sent with a special message :envelope: ")
            .setAuthor(client.user.username, client.user.avatarURL)
                  .setAuthor(client.user.username, client.user.avatarURL)
                 .setFooter('Requested by : ' + message.author.tag)
