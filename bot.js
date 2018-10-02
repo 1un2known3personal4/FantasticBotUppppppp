@@ -645,49 +645,54 @@ message.channel.send({embed:embed});
 }
 });
 
-                        client.on('message', message => { //bot
-                            if (message.content.startsWith(prefix + "bot")) {
-                            message.channel.send({
-                                embed: new Discord.RichEmbed()
-                                    .setAuthor(client.user.username,Rocket.user.avatarURL)
-                                    .setThumbnail(client.user.avatarURL)
-                                    .setColor('RANDOM')
-                                    .setTitle('``Fantastic Bot`` ')
-                                    .addField('``Uptime``', [timeCon(process.uptime())], true)
-                                    .addField('``Ping``' , [`${Date.now() - message.createdTimestamp}` + 'MS'], true)
-                                    .addField('``RAM Usage``', `[${(process.memoryUsage().rss / 1048576).toFixed()}MB]`, true)
-                                    .addField('``servers``', [client.guilds.size], true)
-                                    .addField('``channels``' , `[ ${client.channels.size} ]` , true)
-                                    .addField('``Users``' ,`[ ${client.users.size} ]` , true)
-                                    .addField('``Name``' , `[ ${client.user.tag} ]` , true)
-                                    .addField('``ID``' , `[ ${client.user.id} ]` , true)
-                                          .addField('``Prefix``' , `[ ${prefix} ]` , true)
-                                          .addField('``Language``' , `[ Java Script ]` , true)
 
-                            })`
-                        }
-                        });
+client.on('message', message => {//roles
+    if (message.content === prefix + "roles") {
+        var roles = message.guild.roles.map(roles => `${roles.name}, `).join(' ')
+        const embed = new Discord.RichEmbed()
+        .setColor('RANDOM')
+        .addField('Roles:',`**[${roles}]**`)
+        message.channel.sendEmbed(embed);
+    }
+});
+client.on('message', message => {//rooms
+    if (message.content === prefix + "rooms") {
+        var channels = message.guild.channels.map(channels => `${channels.name}, `).join(' ')
+        const embed = new Discord.RichEmbed()
+        .setColor('RANDOM')
+        .addField('rooms:',`**[${channels}]**`)
+        message.channel.sendEmbed(embed);
+    }
+});
 
-                        function timeCon(time) { //bot2
-                            let days = Math.floor(time % 31536000 / 86400)
-                            let hours = Math.floor(time % 31536000 % 86400 / 3600)
-                            let minutes = Math.floor(time % 31536000 % 86400 % 3600 / 60)
-                            let seconds = Math.round(time % 31536000 % 86400 % 3600 % 60)
-                            days = days > 9 ? days : '0' + days
-                            hours = hours > 9 ? hours : '0' + hours
-                            minutes = minutes > 9 ? minutes : '0' + minutes
-                            seconds = seconds > 9 ? seconds : '0' + seconds
-                            return `${days > 0 ? `${days}:` : ''}${(hours || days) > 0 ? `${hours}:` : ''}${minutes}:${seconds}`
-                        }
-   
 
-   
-   
-   
-   
-   
-   
-   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
    // Token
 client.login(process.env.BOT_TOKEN);
