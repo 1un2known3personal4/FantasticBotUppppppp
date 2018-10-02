@@ -7439,7 +7439,54 @@ message.member.removeRole(message.guild.roles.find("name", "100"));
 	
 });
   
+client.on('message',function(message) {
+    let toKick = message.mentions.users.first();
+    let toReason = message.content.split(" ").slice(2).join(" ");
+    let toEmbed = new Discord.RichEmbed()
+   if(message.content.startsWith(prefix + 'kick')) {
+       if(!message.member.hasPermission("KICK_MEMBERS")) return message.reply('**# - You do not have the permission !**');
+       if(toKick.kickable) return message.reply("**# - I Don't have permission to kick **");
+       if(!toReason) return message.reply("**# - Type a reason**")
+       if(toKick.id === message.author.id) return message.reply("**# I can not kick you**")
+       if(!message.guild.member(toKick).kickable) return message.reply("**# - I can not kick this person !**")
+       let toEmbed;
+       toEmbed = new Discord.RichEmbed()
+       .setTitle("You were expelled from the server!")
+       .setThumbnail(toKick.avatarURL)
+       .addField("**# - Server:**",message.guild.name,true)
+       .addField("**# - Reason:**",toReason,true)
+       .addField("**# - By:**",message.author,true)
+       if(message.member.hasPermission("KICK_MEMBERS")) return (
+           toKick.sendMessage({embed: toEmbed}).then(() => message.guild.member(toKick).kick()).then(() => message.channel.send(`**# Done! I kicked: ${toKick}**`))
+       )
+       }
+});
+client.on("message", function(message) {
+    let toBan = message.mentions.users.first();
+    let toReason = message.content.split(" ").slice(2).join(" ");
+    let toEmbed = new Discord.RichEmbed()
+   if(message.content.startsWith(prefix + "ban")) {
+       if(!message.member.hasPermission("BAN_MEMBERS")) return message.reply("**# - You do not have the permission **");
+       if(!toBan) return message.reply("**# - Mention a user!**");
+       if(toBan.id === ("344127240935571457")) return message.reply("**I can not ban me**");
+       if(toBan === message.member.guild.owner) return message.reply("**# I can not ban owner server**");
+       if(toBan.bannable) return message.reply("** I can not kick this person ! **");
+       if(!toReason) return message.reply("**# - Type a reason **")
+       if(toBan.id === message.author.id) return message.reply("**# I can not ban you**")
+       if(!message.guild.member(toBan).bannable) return message.reply("**# - I can not ban this person ! **")
+       let toEmbed;
+       toEmbed = new Discord.RichEmbed()
+       .setTitle("You were expelled from the server!")
+       .setThumbnail(toBan.avatarURL)
+       .addField("**# - Server:**",message.guild.name,true)
+       .addField("**# - Reason:**",toReason,true)
+       .addField("**# - By:**",message.author,true)
+       if(message.member.hasPermission("BAN_MEMBERS")) return (
+           toBan.sendMessage({embed: toEmbed}).then(() => message.guild.member(toBan).ban({reason: toReason})).then(() => message.channel.send(`**# Done! I banned: ${toBan}**`))
+       );
 
+   }
+});
 
 
 
