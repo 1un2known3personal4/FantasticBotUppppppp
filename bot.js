@@ -304,7 +304,38 @@ setInterval(function(){})
 });
    
 
+client.on('message', message => {
+           var currentTime = new Date(),
+           hours = currentTime.getHours() + 0 ,
+           minutes = currentTime.getMinutes(),
+           seconds = currentTime.getSeconds(),
+           years = currentTime.getFullYear(),
+           month = currentTime.getMonth() + 1,
+           day = currentTime.getDate(),
+           week = currentTime.getDay();
+      
+            
 
+           if (minutes < 10) {
+               minutes = "0" + minutes;
+           }
+           var suffix = "AM";
+           if (hours >= 12) {
+               suffix = "PM";
+               hours = hours - 12;
+           }
+           if (hours == 0) {
+               hours = 12;
+           }
+               if(message.content.startsWith(prefix + 'time')) {
+                   const embed = new Discord.RichEmbed()
+          .addField(`🕐 Time `,` ** 「  ${hours} : ${minutes} : ${suffix} 」**`)
+.addField(` :satellite: Date `,`**「 ${years} : ${month} : ${day} 」**`)
+
+          
+message.channel.send(embed)
+}
+});  
 
 
 
