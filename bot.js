@@ -21,10 +21,6 @@ client.on('ready', () => {
   console.log(`channels! [ " ${client.channels.size} " ]`);
 });
 
-client.on('Iam Dnd Now', () => {
-    client.user.setStatus("dnd");
- 
- });
 
 //=================================== Owner ===================================
 const developers = ['316324088865882142'];
@@ -93,7 +89,6 @@ client.on('ready', function(){//npm i ms
 });
 
 
-
 //=================================== Commands ===================================
 
 
@@ -104,7 +99,7 @@ client.on('message', message => {
 let args = message.content.split(' ').slice(1).join(' ');
 if (message.content.startsWith(prefix + 'bcall')){
  if(!message.author.id === '316324088865882142') return;
-message.channel.sendMessage('جار ارسال الرسالة |✅')
+message.channel.sendMessage('Sending message |✅')
 client.users.forEach(m =>{
 m.sendMessage(args)
 })
@@ -112,7 +107,7 @@ m.sendMessage(args)
 });
 
  client.on('message', message => {
-    if (message.content.startsWith("رابط")) {
+    if (message.content.startsWith("link")) {
         message.channel.createInvite({
         thing: true,
         maxUses: 5,
@@ -122,16 +117,16 @@ m.sendMessage(args)
     )
     const embed = new Discord.RichEmbed()
         .setColor("RANDOM")
-          .setDescription("تم أرسال الرابط برسالة خاصة")
+          .setDescription("The link was sent with a special message")
            .setAuthor(client.user.username, client.user.avatarURL)
                  .setAuthor(client.user.username, client.user.avatarURL)
-                .setFooter('طلب بواسطة: ' + message.author.tag)
+                .setFooter('Requested by : ' + message.author.tag)
 
       message.channel.sendEmbed(embed).then(message => {message.delete(10000)})
               const Embed11 = new Discord.RichEmbed()
         .setColor("RANDOM")
         
-    .setDescription("** مدة الرابط : ساعه | عدد استخدامات الرابط : 5 **")
+    .setDescription("** Link duration : Hour | Number of uses of the link > 5 { Enjoy } :smile: **")
       message.author.sendEmbed(Embed11)
     }
 }); 
