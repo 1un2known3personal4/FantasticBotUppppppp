@@ -1225,7 +1225,7 @@ client.on('message', message => {
      })
 				
 	           message.channel.sendMessage({embed: new Discord.RichEmbed()
-     .setColor('GREEN').setAuthor(`${message.author.username}'`, message.author.avatarURL).setDescription('``جاري العمل على الالوان |✅``')
+     .setColor('GREEN').setAuthor(`${message.author.username}'`, message.author.avatarURL).setDescription('``Working on colors |✅``')
 	 });
 				
 	}});
@@ -7434,7 +7434,7 @@ message.member.removeRole(message.guild.roles.find("name", "100"));
 	}
   if (message.content === prefix + 'colors') {
       if (!message.channel.guild) return;
-    message.channel.sendFile('https://cdn.discordapp.com/attachments/488945684595081217/496530165883731979/2000725_1.jpg');
+    message.channel.sendFile('https://cdn.discordapp.com/attachments/488945684595081217/496703525762629643/1646ef783d8d2dd1b614e3f5d8a1cb4e.png');
   }
 	
 });
