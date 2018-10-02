@@ -72,7 +72,7 @@ client.on("guildMemberAdd", member => {
 
 client.on('ready', function(){//npm i ms 
     var ms = 5000 ;
-    var setGame = [`Soon`,`iiTzEnd | ● ØF ●#0920`];
+    var setGame = [`Soon`,`Users! [ " ${client.users.size} " ]`,`servers! [ " ${client.guilds.size} " ]`];
     var i = -1;
     var j = 0;
     setInterval(function (){
