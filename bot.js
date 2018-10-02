@@ -620,7 +620,7 @@ client.on('message',message =>{
   var embed = new Discord.RichEmbed()
   .setColor("#000000")
   .setDescription(`${invites.join(`\n`)+'\n\n**By:** '+message.author}`)
-  .setThumbnail("https://cdn.discordapp.com/attachments/488945684595081217/496529327417196599/digivice_ipod_lock_screen_by_nox_umbra-d37ls1y.jpg")
+  .setThumbnail("https://cdn.discordapp.com/attachments/488945684595081217/496530165883731979/2000725_1.jpg")
            message.channel.send({ embed: embed });
    
   });
@@ -629,7 +629,21 @@ client.on('message',message =>{
   });
 
 
-
+client.on('message', message => { //ping
+    if(!message.channel.guild) return;
+if (message.content.startsWith(prefix + 'ping')) {
+if(!message.channel.guild) return;
+var msg = `${Date.now() - message.createdTimestamp}`
+var api = `${Math.round(client.ping)}`
+if (message.author.bot) return;
+let embed = new Discord.RichEmbed()
+.setAuthor(message.author.username,message.author.avatarURL)
+.setColor('RANDOM')
+.addField('**Time Taken:**',msg + " ms 📶 ")
+.addField('**WebSocket:**',api + " ms 📶 ")
+message.channel.send({embed:embed});
+}
+});
 
 
    
