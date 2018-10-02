@@ -72,7 +72,7 @@ client.on("guildMemberAdd", member => {
 
 client.on('ready', function(){//npm i ms 
     var ms = 5000 ;
-    var setGame = [`Soon`,`Users! [ " ${client.users.size} " ]`,`servers! [ " ${client.guilds.size} " ]`];
+    var setGame = [`Soon | #inv`,`Users! [ " ${client.users.size} " ]`,`servers! [ " ${client.guilds.size} " ]`];
     var i = -1;
     var j = 0;
     setInterval(function (){
@@ -188,7 +188,45 @@ const command = args.shift().toLowerCase();
 
    
    
-   
+   client.on('message', message => {
+ const args = message.content.slice(prefix.length).trim().split(/ +/g);
+const command = args.shift().toLowerCase();
+if (message.author.bot) return;
+    if (command === 'mc') {
+                        if(!message.channel.guild) return;
+
+if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply('You Need MANAGE_MESSAGES Permission').then(message => message.delete(5000))
+           message.channel.overwritePermissions(message.guild.id, {
+         SEND_MESSAGES: false
+
+           }).then(() => {
+ const e = new Discord.RichEmbed()
+               .setAuthor('Channel Disabled By : '+message.author.username)
+                .setColor('#36393e')
+               
+               message.channel.send(e)
+               });
+             }
+if (command === "umc") {
+    
+    if(!message.channel.guild) return;
+
+if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply('You Need MANAGE_MESSAGES Permission').then(message => message.delete(5000))
+           message.channel.overwritePermissions(message.guild.id, {
+         SEND_MESSAGES: true
+
+           }).then(() => {
+               const e = new Discord.RichEmbed()
+               .setAuthor('Channel Enabled By : '+message.author.username)
+                        .setColor('#36393e')
+               
+               message.channel.send(e)
+           });
+             }
+
+
+
+});
    
    
    
