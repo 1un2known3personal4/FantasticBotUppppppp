@@ -665,7 +665,7 @@ client.on('message', message => {//rooms
     }
 });
 
-client.on('message', message => {
+cleint.on('message', message => {//id
     if(message.content == (prefix + 'user')) {
 
              if (message.channel.type === 'dm') return message.reply('This is only for servers :x:');
@@ -738,7 +738,7 @@ client.on('message', message => {
                                                                              ctx.fillText(`${getvalueof.username}`,655, 170);
 
 
-                                                          moment.locale('ar-ly');
+                                                          moment.locale('en-ly');
 
 
                                                                     ctx.font = '30px Arial';
@@ -756,11 +756,11 @@ client.on('message', message => {
      if (getvalueof.presence.status === 'online') {
          status = 'Online';
      } else if (getvalueof.presence.status === 'dnd') {
-         status = 'Busy';
+         status = 'dnd';
      } else if (getvalueof.presence.status === 'idle') {
-         status = 'Out of range';
+         status = 'idle';
      } else if (getvalueof.presence.status === 'offline') {
-         status = 'Off line';
+         status = 'invisible';
      }
 
 
