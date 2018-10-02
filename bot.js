@@ -227,6 +227,81 @@ if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply('You N
 
 
 });
+
+   
+   
+      client.on('message',async message =>{ 
+    if(message.content.startsWith(prefix + "channels")) {
+        let i = 1;
+        let embed = new Discord.RichEmbed()
+        .setAuthor(message.author.username, message.author.avatarURL)
+        .setTitle(message.guild.name)
+        .setThumbnail(message.guild.iconURL)
+        .setDescription(message.guild.channels.map(c => `\`${i++}\` - **${c.name}**`))
+        .setFooter(message.guild.channels.size + ' Channels in the server!');
+        message.channel.send(embed).then(msg => {
+            msg.delete(25000);
+            message.delete(25000);
+        });
+    }
+});   
+   
+   
+   
+client.on('message', message => {
+          let args = message.content.split(' ').slice(1);
+   if(message.content.split(' ')[0] == prefix + 'color'){
+           const embedd = new Discord.RichEmbed()
+     .setFooter('Requested by '+message.author.username, message.author.avatarURL)
+   .setDescription(`**There's No Color With This Number ** :x: `)
+   .setColor(`ff0000`)
+
+    if(!isNaN(args) && args.length > 0)
+    
+
+if    (!(message.guild.roles.find("name",`${args}`))) return  message.channel.sendEmbed(embedd);
+
+
+       var a = message.guild.roles.find("name",`${args}`)
+                if(!a)return;
+const embed = new Discord.RichEmbed()
+                    
+     .setFooter('Requested by '+message.author.username, message.author.avatarURL)
+   .setDescription(`**Color Changed To Successfully** :white_check_mark: `)
+ 
+   .setColor(`${a.hexColor}`)
+  message.channel.sendEmbed(embed);
+          if (!args)return;
+setInterval(function(){})
+                  let count = 0;
+                  let ecount = 0;
+        for(let x = 1; x < 201; x++){
+           
+            message.member.removeRole(message.guild.roles.find("name",`${x}`))
+          
+            }
+                message.member.addRole(message.guild.roles.find("name",`${args}`));
+        
+            
+    }
+});   
+   
+   
+   
+
+
+
+
+
+
+
+
+
+
+
+
+   
+   
    
    
    
