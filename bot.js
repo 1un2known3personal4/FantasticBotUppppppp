@@ -11,7 +11,7 @@ const r1 = require('snekfetch');
 const jimp = require('jimp')
 const math = require('math-expression-evaluator'); 
 
-const prefix = "#";
+const prefix = "!";
 
 
 client.on('ready', () => {
@@ -24,7 +24,7 @@ client.on('ready', () => {
 
 //=================================== Owner ===================================
 const developers = ['316324088865882142'];
-const admin = "#";
+const admin = "!";
 client.on('message', message => {
     var argresult = message.content.split(` `).slice(1).join(' ');
       if (!developers.includes(message.author.id)) return;
@@ -72,7 +72,7 @@ client.on("guildMemberAdd", member => {
 
 client.on('ready', function(){//npm i ms 
     var ms = 5000 ;
-    var setGame = [`Soon | #inv`,`Users! [ " ${client.users.size} " ]`,`servers! [ " ${client.guilds.size} " ]`];
+    var setGame = [`Soon | !inv`,`Users! [ " ${client.users.size} " ]`,`servers! [ " ${client.guilds.size} " ]`];
     var i = -1;
     var j = 0;
     setInterval(function (){
