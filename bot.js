@@ -171,7 +171,21 @@ message.channel.send(`This avatar For ${user} link : ${user.avatarURL}`);
   }
 });
    
-   
+   client.on('message', message => {
+    const args = message.content.slice(prefix.length).trim().split(/ +/g);
+const command = args.shift().toLowerCase();
+    if (command === "bans") {
+        message.delete(5000)
+         if(!message.guild.member(client.user).hasPermission("ADMINISTRATOR")) return message.reply("Error : \` I Dont Have ADMINISTRATOR Permission\`").then(message => message.delete(5000));
+        if(!message.member.hasPermission('ADMINISTRATOR')) return;
+        if(!message.channel.guild) return;
+        message.guild.fetchBans()
+        .then(bans => message.channel.send(`\`${bans.size}\` ***: The number of people banned from the server ***`)).then(message => message.delete(5000))
+
+  .catch(console.error);
+}
+});
+
    
    
    
