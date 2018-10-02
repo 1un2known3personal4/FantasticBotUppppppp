@@ -665,31 +665,29 @@ client.on('message', message => {//rooms
     }
 });
 
-
-  client.on('message', message => {
-
-    if (message.content === prefix + "hc") {
-                        if(!message.channel.guild) return message.reply(' This command only for servers');
-
-if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply('You do not have permissions');
-           message.channel.overwritePermissions(message.guild.id, {
-         READ_MESSAGES: false
-           }).then(() => {
-               message.reply("Done . ✅")
-           });
-  
-
-  client.on('message', message => {
-
-    if (message.content === prefix + "sc") {
-                        if(!message.channel.guild) return message.reply(' This command only for servers');
-
-if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply('You do not have permissions');
-           message.channel.overwritePermissions(message.guild.id, {
-         READ_MESSAGES: true
-           }).then(() => {
-               message.reply("Done . ✅")
-           });
+client.on('message',function(message) {
+    let toKick = message.mentions.users.first();
+    let toReason = message.content.split(" ").slice(2).join(" ");
+    let toEmbed = new Discord.RichEmbed()
+   if(message.content.startsWith(prefix + 'kick')) {
+       if(!message.member.hasPermission("KICK_MEMBERS")) return message.reply('**# - You do not have the permission !**');
+       if(toKick.kickable) return message.reply("**# - I Don't have permission to kick **");
+       if(!toReason) return message.reply("**# - Type a reason**")
+       if(toKick.id === message.author.id) return message.reply("**# لI can not kick you**")
+       if(!message.guild.member(toKick).kickable) return message.reply("**# - I can not kick this person !**")
+       let toEmbed;
+       toEmbed = new Discord.RichEmbed()
+       .setTitle("You were expelled from the server!")
+       .setThumbnail(toKick.avatarURL)
+       .addField("**# - Server:**",message.guild.name,true)
+       .addField("**# - Reason:**",toReason,true)
+       .addField("**# - By:**",message.author,true)
+       if(message.member.hasPermission("KICK_MEMBERS")) return (
+           toKick.sendMessage({embed: toEmbed}).then(() => message.guild.member(toKick).kick()).then(() => message.channel.send(`**# Done! I kicked: ${toKick}**`))
+       )
+       }
+});
+ 
   
 
 
