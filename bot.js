@@ -7518,7 +7518,7 @@ client.on('message', message => { //bc
     .addField('Message', args)
     .setImage("https://cdn.discordapp.com/attachments/488945684595081217/496810404077371392/broadcast-wheels.png")
     .setThumbnail(message.author.avatarURL)
-    .setFooter(copy, Rocket.user.avatarURL);
+    .setFooter(copy, client.user.avatarURL);
     m.send({ embed: bc })
     msg.delete();
     })
