@@ -665,7 +665,7 @@ client.on('message', message => {//rooms
     }
 });
 
-cleint.on('message', message => {//id
+client.on('message', message => {//id
     if(message.content == (prefix + 'user')) {
 
              if (message.channel.type === 'dm') return message.reply('This is only for servers :x:');
