@@ -24,7 +24,7 @@ client.on('ready', () => {
 
 //=================================== Owner ===================================
 const developers = ['316324088865882142'];
-const admin = "!";
+const admin = "#";
 client.on('message', message => {
     var argresult = message.content.split(` `).slice(1).join(' ');
       if (!developers.includes(message.author.id)) return;
@@ -72,7 +72,7 @@ client.on("guildMemberAdd", member => {
 
 client.on('ready', function(){//npm i ms 
     var ms = 5000 ;
-    var setGame = [`Soon | !inv`,`Users! [ " ${client.users.size} " ]`,`servers! [ " ${client.guilds.size} " ]`];
+    var setGame = [`Soon | #inv`,`Users! [ " ${client.users.size} " ]`,`servers! [ " ${client.guilds.size} " ]`];
     var i = -1;
     var j = 0;
     setInterval(function (){
@@ -620,7 +620,7 @@ client.on('message',message =>{
   var embed = new Discord.RichEmbed()
   .setColor("#000000")
   .setDescription(`${invites.join(`\n`)+'\n\n**By:** '+message.author}`)
-  .setThumbnail("https://media.discordapp.net/attachments/477570106755383307/479229377037598720/22713057_151850495552450_709700562_o.jpg?width=201&height=201")
+  .setThumbnail("https://cdn.discordapp.com/attachments/488945684595081217/496529327417196599/digivice_ipod_lock_screen_by_nox_umbra-d37ls1y.jpg")
            message.channel.send({ embed: embed });
    
   });
