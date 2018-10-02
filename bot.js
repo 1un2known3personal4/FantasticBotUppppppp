@@ -21,6 +21,10 @@ client.on('ready', () => {
   console.log(`channels! [ " ${client.channels.size} " ]`);
 });
 
+client.on('Iam Dnd Now', () => {
+    client.user.setStatus("dnd");
+ 
+ });
 
 //=================================== Owner ===================================
 const developers = ['316324088865882142'];
