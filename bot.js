@@ -149,6 +149,27 @@ message.channel.send(`This avatar For ${user} link : ${user.avatarURL}`);
 }
 });
    
+      client.on('message', async message => {
+  let messageArray = message.content.split(' ');
+  let args = messageArray.slice(1);
+  if(message.content.startsWith(prefix + "invite")) {
+    if(!args) return message.reply('**Select an invitation name**');
+    message.guild.fetchInvites().then(i => {
+      let inv = i.get(args[0]);
+      if(!inv) return message.reply(`**I could not find ${args}**`);
+      var iNv = new Discord.RichEmbed()
+      .setAuthor(message.author.username,message.author.avatarURL)
+      .setThumbnail(message.author.avatarURL)
+      .addField('# - The owner of the invitation',inv.inviter,true)
+      .addField('# - The invitation Room',inv.channel,true)
+      .addField('# - The end date of the invitation',moment(inv.expiresAt).format('YYYY/M/DD:h'),true)
+      .addField('# - Invitation created',moment(inv.createdAt).format('YYYY/M/DD:h'),true)
+      .addField('# - Duration of the invitation',moment(inv.maxAge).format('DD **hour** h **day**'),true)
+      .addField('# - Uses',inv.uses || inv.maxUses,true)
+      message.channel.send(iNv);
+    });
+  }
+});
    
    
    
