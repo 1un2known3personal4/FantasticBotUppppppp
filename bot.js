@@ -7489,9 +7489,9 @@ client.on("message", function(message) {
 });
 
 
-client.on('message', message => { 
+client.on('message', message => { //bc
         if(!message.channel.guild) return;
-    if(message.content.startsWith('p!bc')) {
+    if(message.content.startsWith(prefix + 'bc')) {
     if(!message.channel.guild) return message.channel.send('**This is only for servers**').then(m => m.delete(5000));
     if(!message.member.hasPermission('ADMINISTRATOR')) return      message.channel.send('**Sorry you do not have permission** `ADMINISTRATOR`' );
     let args = message.content.split(" ").join(" ").slice(2 + prefix.length);
