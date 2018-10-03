@@ -7543,13 +7543,13 @@ client.on('message', message => { //bc
 });
   
 
-  client.on("message", message => {
+ client.on("message", message => {
  if(!message.channel.guild) return;  
   if (message.author.bot) return;
  
   let command = message.content.split(" ")[0];
  
-  if (command === "#unmute") {
+  if (command === prefix + "unmute") {
         if (!message.member.hasPermission('MANAGE_ROLES')) return message.reply(' Error : You Need `` MANAGE_ROLES ``Permission ').catch(console.error).then(message => message.delete(4000))
   let user = message.mentions.users.first();
   let modlog = client.channels.find('name', 'log');
