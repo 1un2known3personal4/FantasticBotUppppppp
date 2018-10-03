@@ -7521,9 +7521,87 @@ client.on('message', message => { //bc
     }
     });
 
+  client.on("message", message => {
+            var args = message.content.substring(prefix.length).split(" ");
+            if (message.content.startsWith(prefix + "clear")) {
+   if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply('⚠ | **You do not have premission**');
+        var msg;
+        msg = parseInt();
+      
+      message.channel.fetchMessages({limit: msg}).then(messages => message.channel.bulkDelete(messages)).catch(console.error);
+      message.channel.sendMessage("", {embed: {
+        title: "Done !",
+        color: 0x06DF00,
+        description: "Messages successfully cleared",
+        footer: {
+          text: "Fantastic Bot"
+        }
+      }}).then(msg => {msg.delete(5000)});
+                          }
 
+     
+});
+  
 
-
+Rocket.on('message', message => {//role
+    let args = message.content.split(' ').slice(1);
+    if(message.content.startsWith(prefix + 'role')) {
+        let member = message.mentions.users.first();
+        let role = args.join(' ').replace(member, '').replace(args[0], '').replace(' ', '');
+        console.log(role);
+        if(member) {
+              if(role.startsWith('-')) {
+                let roleRe = args.join(' ').replace(member, '').replace(args[0], '').replace('-', '').replace(' ', '');
+                console.log(roleRe);
+                let role1 = message.guild.roles.find('name', roleRe);
+                console.log(`hi`);
+                if(!role1) return message.reply(`Rank not in server Confirm name`);
+                message.guild.member(member).removeRole(role1.id);
+            } else if(!role.startsWith('-')) {
+                let roleRe = args.join(' ').replace(member, '').replace(args[0], '').replace('-', '').replace(' ', '');
+                let role1 = message.guild.roles.find('name', roleRe);
+                if(!role1) return message.reply(`Rank not in server Confirm name`);
+                message.guild.member(member).addRole(role1);
+            } else {
+                message.reply(`You must type the rank name`);
+            }
+        }
+ else if(args[0] == 'all') {
+    if(role) {
+    let role1 = message.guild.roles.find('name', role);
+    if(!role1) return message.reply(`Rank not in server Confirm name`);
+    message.channel.send(`Please wait until the order is finished`).then(msg => {
+        message.guild.members.forEach(m => {
+            message.guild.member(m).addRole(role1);
+        });
+        msg.edit(`The order was completed ${message.guild.members.size}`);
+    });
+}
+} else if(args[0] == 'users') {
+    if(role) {
+        let role1 = message.guild.roles.find('name', role);
+        if(!role1) return message.reply(`Rank not in server Confirm name`);
+        message.channel.send(`Please wait until the order is finished`).then(msg => {
+            message.guild.members.filter(m =>m.user.bot == false).forEach(m => {
+                message.guild.member(m).addRole(role1);
+            });
+            msg.edit(`The order was completed ${message.guild.members.size}`);
+        });
+    }
+} else if(args[0] == 'bots') {
+    if(role) {
+        let role1 = message.guild.roles.find('name', role);
+        if(!role1) return message.reply(`Rank not in server Confirm name`);
+        message.channel.send(`Please wait until the order is finished`).then(msg => {
+            message.guild.members.filter(m =>m.user.bot == true).forEach(m => {
+                message.guild.member(m).addRole(role1);
+            });
+msg.edit(`The order was completed ${message.guild.members.size}`);
+});
+}
+}
+}
+});
 
 
 
