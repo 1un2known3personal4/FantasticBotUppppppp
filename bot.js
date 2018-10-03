@@ -7598,7 +7598,23 @@ client.on('message',function(message) {
    } 
 });
 
-
+client.on('message' , message => {
+    let user = message.mentions.users.first()|| client.users.get(message.content.split(' ')[1])
+    if(message.content.startsWith(prefix + 'unban')) {
+        if(!message.member.hasPermission('ADMINISTRATOR')) return message.channel.send('❌|**\`ADMINISTRATOR\`you do not have permission`**');
+        if(!user) return  message.channel.send(`Do this ${prefix} <@ID user> \n or \n ${prefix}unban ID user`);
+        message.guild.unban(user);
+        message.guild.owner.send(`has been unban this person \n ${user} \n By : <@${message.author.id}>`)
+        var embed = new Discord.RichEmbed()
+        .setThumbnail(message.author.avatarURl)
+        .setColor("RANDOM")
+        .setTitle('**●Unban** !')
+        .addField('**●User Unban :** ', `${user}` , true)
+        .addField('**●By :**' ,       ` <@${message.author.id}> ` , true)
+        .setAuthor(message.guild.name)
+        message.channel.sendEmbed(embed)
+    }
+});
 
 
 
