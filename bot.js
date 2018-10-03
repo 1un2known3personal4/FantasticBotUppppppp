@@ -7627,7 +7627,7 @@ channels[member.id].channel = undefined;
 }
 }
 if(oldmember.voiceChannel !== undefined || member.voiceChannel !== undefined) {
-if(member.voiceChannelID === 'آيدي شنل حق إنشاء الروم') {
+if(member.voiceChannelID === '496892938748690442') {
 member.guild.createChannel(member.displayName, "voice", [{
 id: member.id,
 allow: ['CONNECT'],
@@ -7635,7 +7635,7 @@ allow: ['CONNECT'],
 id: member.guild.id,
 deny: ['CONNECT']
 }]).then((channel)=> {
-    const parent = member.guild.channels.get('آيدي شنل حق إنشاء الروم').parentID
+    const parent = member.guild.channels.get('496892938748690442').parentID
     channel.setParent(parent);
     if(!channels[member.id]) channels[member.id] = {
         channel: channel.id,
