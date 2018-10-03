@@ -7521,27 +7521,22 @@ client.on('message', message => { //bc
     }
     });
 
-  client.on("message", message => {
-            var args = message.content.substring(prefix.length).split(" ");
-            if (message.content.startsWith(prefix + "clear")) {
-   if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply('⚠ | **You do not have premission**');
-        var msg;
-        msg = parseInt();
-      
-      message.channel.fetchMessages({limit: msg}).then(messages => message.channel.bulkDelete(messages)).catch(console.error);
-      message.channel.sendMessage("", {embed: {
-        title: "Done !",
-        color: 0x06DF00,
-        description: "Messages successfully cleared",
-        footer: {
-          text: "Fantastic Bot"
-        }
-      }}).then(msg => {msg.delete(5000)});
-                          }
+  client.on('message', message => {
+    let args = message.content.split(" ").slice(1);
+    if (message.author.bot) return;
+    if (!message.channel.guild) return;
+    if (message.content.startsWith(prefix + 'clear')) {
 
-     
+        if (isNaN(args[0])) return message.channel.send('**Please supply a valid amount of messages to purge**');
+        if (args[0] > 100) return message.channel.send('**Please supply a number less than 100**');
+
+        message.channel.bulkDelete(args[0])
+            .then(messages => message.channel.send(`**Successfully deleted \`${messages.size}/${args[0]}\` messages**`).then(msg => msg.delete({
+                timeout: 5000
+            })))
+    }
 });
-  
+
 
  client.on("message", message => {
  if(!message.channel.guild) return;  
