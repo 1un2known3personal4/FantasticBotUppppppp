@@ -7543,7 +7543,7 @@ client.on('message', message => { //bc
 });
   
 
-Rocket.on('message', message => {//role
+client.on('message', message => {//role
     let args = message.content.split(' ').slice(1);
     if(message.content.startsWith(prefix + 'role')) {
         let member = message.mentions.users.first();
