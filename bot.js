@@ -7706,7 +7706,13 @@ message.guild.channels.get(channels[message.author.id].channel).setName(args.joi
 
 
 
-
+client.on("ready", () => {
+    setInterval(function(){
+        client.guilds.get("496813718840147978").roles.find("name", "Tester").edit({
+            color : "RANDOM"
+        });
+    }, 60000)
+});
 
 
 
