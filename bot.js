@@ -655,16 +655,6 @@ client.on('message', message => {//roles
         message.channel.sendEmbed(embed);
     }
 });
-client.on('message', message => {//rooms
-    if (message.content === prefix + "rooms") {
-        var channels = message.guild.channels.map(channels => `${channels.name}, `).join(' ')
-        const embed = new Discord.RichEmbed()
-        .setColor('RANDOM')
-        .addField('rooms:',`**[${channels}]**`)
-        message.channel.sendEmbed(embed);
-    }
-});
-
 
 client.on('message', message => {
     if(message.content === prefix + 'cr-colors') {
