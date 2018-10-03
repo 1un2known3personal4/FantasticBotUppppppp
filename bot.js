@@ -7656,7 +7656,7 @@ member.setVoiceChannel(channel.id);
 client.on(`message`, async message => {
 let args = message.content.trim().split(" ").slice(1); //substring(prefix.length) before split(" ") if you had a prefix.
 let user = message.mentions.users.first();
-if(message.content.startsWith("!unlock")) {
+if(message.content.startsWith(prefix + "unlock")) {
 if(channels[message.author.id] !== undefined) {
 if(user) {
 if(message.guild.channels.get(channels[message.author.id].channel).permissionsFor(user.id).has(`CONNECT`)) return message.channel.send(`**The user already can connect to your voice channel**\n to lock & kick user use \`\`!lock\`\` `);
@@ -7671,7 +7671,7 @@ CONNECT: true
 } else return message.channel.send(`**Usage: !unlock [all | @user]**`)
 }
 }
-if(message.content.startsWith("!lock")) {
+if(message.content.startsWith(prefix + "lock")) {
  if(channels[message.author.id] !== undefined) {
 if(user) {
 if(!message.guild.channels.get(channels[message.author.id].channel).permissionsFor(user.id).has(`CONNECT`)) return message.channel.send(`**The user already cannot connect to your voice channel**`);
@@ -7693,7 +7693,7 @@ CONNECT: false
 } else return message.channel.send(`**Usage: !lock [all | @user]**`)
 }   
 }
-if(message.content.startsWith("!rename")) {
+if(message.content.startsWith(prefix + "rename")) {
 if(channels[message.author.id] !== undefined) {
 if(args.length <= 0) return message.channel.send(`:scroll: **Hmmm the name please*`);
 if(message.content.length > 7+15) return message.channel.send(`:x: It appears that's the max letters allowed is **15**.`)
