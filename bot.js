@@ -1242,7 +1242,7 @@ client.on('message', message => {
 	client.on('message',message => {
 		
 			let args = message.content.split(' ').slice(1);
-	if (message.content.startsWith("$del-colors")) {
+	if (message.content.startsWith(prefix + "del-colors")) {
 		if(!message.member.hasPermission('ADMINISTRATOR')) return
 		let role = message.guild.roles.find('name', '1');
 		
@@ -1254,7 +1254,7 @@ client.on('message', message => {
 	client.on('message',message => {
 		
 			let args = message.content.split(' ').slice(1);
-	if (message.content.startsWith("$del-colors")) {
+	if (message.content.startsWith(prefix + "del-colors")) {
 		if(!message.member.hasPermission('ADMINISTRATOR')) return
 		let role = message.guild.roles.find('name', '2');
 		
@@ -1266,7 +1266,7 @@ client.on('message', message => {
 	client.on('message',message => {
 		
 			let args = message.content.split(' ').slice(1);
-	if (message.content.startsWith("$del-colors")) {
+	if (message.content.startsWith(prefix + "del-colors")) {
 		if(!message.member.hasPermission('ADMINISTRATOR')) return
 		let role = message.guild.roles.find('name', '3');
 		
@@ -1277,7 +1277,7 @@ client.on('message', message => {
 	client.on('message',message => {
 		
 			let args = message.content.split(' ').slice(1);
-	if (message.content.startsWith("$del-colors")) {
+	if (message.content.startsWith(prefix + "del-colors")) {
 		if(!message.member.hasPermission('ADMINISTRATOR')) return
 		let role = message.guild.roles.find('name', '4');
 		
@@ -1289,7 +1289,7 @@ client.on('message', message => {
 	client.on('message',message => {
 		
 			let args = message.content.split(' ').slice(1);
-	if (message.content.startsWith("$del-colors")) {
+	if (message.content.startsWith(prefix + "del-colors")) {
 		if(!message.member.hasPermission('ADMINISTRATOR')) return
 		let role = message.guild.roles.find('name', '5');
 		
@@ -1301,7 +1301,7 @@ client.on('message', message => {
 	client.on('message',message => {
 		
 			let args = message.content.split(' ').slice(1);
-	if (message.content.startsWith("$del-colors")) {
+	if (message.content.startsWith(prefix + "del-colors")) {
 		if(!message.member.hasPermission('ADMINISTRATOR')) return
 		let role = message.guild.roles.find('name', '6');
 		
@@ -1313,7 +1313,7 @@ client.on('message', message => {
 	client.on('message',message => {
 		
 			let args = message.content.split(' ').slice(1);
-	if (message.content.startsWith("$del-colors")) {
+	if (message.content.startsWith(prefix + "del-colors")) {
 		if(!message.member.hasPermission('ADMINISTRATOR')) return
 		let role = message.guild.roles.find('name', '7');
 		
@@ -1325,7 +1325,7 @@ client.on('message', message => {
 	client.on('message',message => {
 		
 			let args = message.content.split(' ').slice(1);
-	if (message.content.startsWith("$del-colors")) {
+	if (message.content.startsWith(prefix + "del-colors")) {
 		if(!message.member.hasPermission('ADMINISTRATOR')) return
 		let role = message.guild.roles.find('name', '8');
 		
@@ -1337,7 +1337,7 @@ client.on('message', message => {
 	client.on('message',message => {
 		
 			let args = message.content.split(' ').slice(1);
-	if (message.content.startsWith("$del-colors")) {
+	if (message.content.startsWith(prefix + "del-colors")) {
 		if(!message.member.hasPermission('ADMINISTRATOR')) return
 		let role = message.guild.roles.find('name', '9');
 		
@@ -1349,7 +1349,7 @@ client.on('message', message => {
 	client.on('message',message => {
 		
 			let args = message.content.split(' ').slice(1);
-	if (message.content.startsWith("$del-colors")) {
+	if (message.content.startsWith(prefix + "del-colors")) {
 		if(!message.member.hasPermission('ADMINISTRATOR')) return
 		let role = message.guild.roles.find('name', '10');
 		
@@ -1361,7 +1361,7 @@ client.on('message', message => {
 	client.on('message',message => {
 		
 			let args = message.content.split(' ').slice(1);
-	if (message.content.startsWith("$del-colors")) {
+	if (message.content.startsWith(prefix + "del-colors")) {
 		if(!message.member.hasPermission('ADMINISTRATOR')) return
 		let role = message.guild.roles.find('name', '11');
 		
@@ -1373,7 +1373,7 @@ client.on('message', message => {
 	client.on('message',message => {
 		
 			let args = message.content.split(' ').slice(1);
-	if (message.content.startsWith("$del-colors")) {
+	if (message.content.startsWith(prefix + "del-colors")) {
 		if(!message.member.hasPermission('ADMINISTRATOR')) return
 		let role = message.guild.roles.find('name', '12');
 		
@@ -1385,7 +1385,7 @@ client.on('message', message => {
 	client.on('message',message => {
 		
 			let args = message.content.split(' ').slice(1);
-	if (message.content.startsWith("$del-colors")) {
+	if (message.content.startsWith(prefix + "del-colors")) {
 		if(!message.member.hasPermission('ADMINISTRATOR')) return
 		let role = message.guild.roles.find('name', '13');
 		
@@ -1397,7 +1397,7 @@ client.on('message', message => {
 	client.on('message',message => {
 		
 			let args = message.content.split(' ').slice(1);
-	if (message.content.startsWith("$del-colors")) {
+	if (message.content.startsWith(prefix + "del-colors")) {
 		if(!message.member.hasPermission('ADMINISTRATOR')) return
 		let role = message.guild.roles.find('name', '14');
 		
@@ -1409,7 +1409,7 @@ client.on('message', message => {
 	client.on('message',message => {
 		
 			let args = message.content.split(' ').slice(1);
-	if (message.content.startsWith("$del-colors")) {
+	if (message.content.startsWith(prefix + "del-colors")) {
 		if(!message.member.hasPermission('ADMINISTRATOR')) return
 		let role = message.guild.roles.find('name', '15');
 		
@@ -1421,7 +1421,7 @@ client.on('message', message => {
 	client.on('message',message => {
 		
 			let args = message.content.split(' ').slice(1);
-	if (message.content.startsWith("$del-colors")) {
+	if (message.content.startsWith(prefix + "del-colors")) {
 		if(!message.member.hasPermission('ADMINISTRATOR')) return
 		let role = message.guild.roles.find('name', '16');
 		
@@ -1433,7 +1433,7 @@ client.on('message', message => {
 	client.on('message',message => {
 		
 			let args = message.content.split(' ').slice(1);
-	if (message.content.startsWith("$del-colors")) {
+	if (message.content.startsWith(prefix + "del-colors")) {
 		if(!message.member.hasPermission('ADMINISTRATOR')) return
 		let role = message.guild.roles.find('name', '17');
 		
@@ -1445,7 +1445,7 @@ client.on('message', message => {
 	client.on('message',message => {
 		
 			let args = message.content.split(' ').slice(1);
-	if (message.content.startsWith("$del-colors")) {
+	if (message.content.startsWith(prefix + "del-colors")) {
 		if(!message.member.hasPermission('ADMINISTRATOR')) return
 		let role = message.guild.roles.find('name', '18');
 		
@@ -1457,7 +1457,7 @@ client.on('message', message => {
 	client.on('message',message => {
 		
 			let args = message.content.split(' ').slice(1);
-	if (message.content.startsWith("$del-colors")) {
+	if (message.content.startsWith(prefix + "del-colors")) {
 		if(!message.member.hasPermission('ADMINISTRATOR')) return
 		let role = message.guild.roles.find('name', '19');
 		
@@ -1469,7 +1469,7 @@ client.on('message', message => {
 	client.on('message',message => {
 		
 			let args = message.content.split(' ').slice(1);
-	if (message.content.startsWith("$del-colors")) {
+	if (message.content.startsWith(prefix + "del-colors")) {
 		if(!message.member.hasPermission('ADMINISTRATOR')) return
 		let role = message.guild.roles.find('name', '20');
 		
@@ -1480,7 +1480,7 @@ client.on('message', message => {
 	client.on('message',message => {
 		
 			let args = message.content.split(' ').slice(1);
-	if (message.content.startsWith("$del-colors")) {
+	if (message.content.startsWith(prefix + "del-colors")) {
 		if(!message.member.hasPermission('ADMINISTRATOR')) return
 		let role = message.guild.roles.find('name', '21');
 		
@@ -1492,7 +1492,7 @@ client.on('message', message => {
 	client.on('message',message => {
 		
 			let args = message.content.split(' ').slice(1);
-	if (message.content.startsWith("$del-colors")) {
+	if (message.content.startsWith(prefix + "del-colors")) {
 		if(!message.member.hasPermission('ADMINISTRATOR')) return
 		let role = message.guild.roles.find('name', '22');
 		
@@ -1504,7 +1504,7 @@ client.on('message', message => {
 	client.on('message',message => {
 		
 			let args = message.content.split(' ').slice(1);
-	if (message.content.startsWith("$del-colors")) {
+	if (message.content.startsWith(prefix + "del-colors")) {
 		if(!message.member.hasPermission('ADMINISTRATOR')) return
 		let role = message.guild.roles.find('name', '23');
 		
@@ -1516,7 +1516,7 @@ client.on('message', message => {
 	client.on('message',message => {
 		
 			let args = message.content.split(' ').slice(1);
-	if (message.content.startsWith("$del-colors")) {
+	if (message.content.startsWith(prefix + "del-colors")) {
 		if(!message.member.hasPermission('ADMINISTRATOR')) return
 		let role = message.guild.roles.find('name', '24');
 		
@@ -1528,7 +1528,7 @@ client.on('message', message => {
 	client.on('message',message => {
 		
 			let args = message.content.split(' ').slice(1);
-	if (message.content.startsWith("$del-colors")) {
+	if (message.content.startsWith(prefix + "del-colors")) {
 		if(!message.member.hasPermission('ADMINISTRATOR')) return
 		let role = message.guild.roles.find('name', '25');
 		
@@ -1540,7 +1540,7 @@ client.on('message', message => {
 	client.on('message',message => {
 		
 			let args = message.content.split(' ').slice(1);
-	if (message.content.startsWith("$del-colors")) {
+	if (message.content.startsWith(prefix + "del-colors")) {
 		if(!message.member.hasPermission('ADMINISTRATOR')) return
 		let role = message.guild.roles.find('name', '26');
 		
@@ -1552,7 +1552,7 @@ client.on('message', message => {
 	client.on('message',message => {
 		
 			let args = message.content.split(' ').slice(1);
-	if (message.content.startsWith("$del-colors")) {
+	if (message.content.startsWith(prefix + "del-colors")) {
 		if(!message.member.hasPermission('ADMINISTRATOR')) return
 		let role = message.guild.roles.find('name', '27');
 		
@@ -1564,7 +1564,7 @@ client.on('message', message => {
 	client.on('message',message => {
 		
 			let args = message.content.split(' ').slice(1);
-	if (message.content.startsWith("$del-colors")) {
+	if (message.content.startsWith(prefix + "del-colors")) {
 		if(!message.member.hasPermission('ADMINISTRATOR')) return
 		let role = message.guild.roles.find('name', '28');
 		
@@ -1576,7 +1576,7 @@ client.on('message', message => {
 	client.on('message',message => {
 		
 			let args = message.content.split(' ').slice(1);
-	if (message.content.startsWith("$del-colors")) {
+	if (message.content.startsWith(prefix + "del-colors")) {
 		if(!message.member.hasPermission('ADMINISTRATOR')) return
 		let role = message.guild.roles.find('name', '29');
 		
@@ -1588,7 +1588,7 @@ client.on('message', message => {
 	client.on('message',message => {
 		
 			let args = message.content.split(' ').slice(1);
-	if (message.content.startsWith("$del-colors")) {
+	if (message.content.startsWith(prefix + "del-colors")) {
 		if(!message.member.hasPermission('ADMINISTRATOR')) return
 		let role = message.guild.roles.find('name', '30');
 		
@@ -1600,7 +1600,7 @@ client.on('message', message => {
 	client.on('message',message => {
 		
 			let args = message.content.split(' ').slice(1);
-	if (message.content.startsWith("$del-colors")) {
+	if (message.content.startsWith(prefix + "del-colors")) {
 		if(!message.member.hasPermission('ADMINISTRATOR')) return
 		let role = message.guild.roles.find('name', '31');
 		
@@ -1612,7 +1612,7 @@ client.on('message', message => {
 	client.on('message',message => {
 		
 			let args = message.content.split(' ').slice(1);
-	if (message.content.startsWith("$del-colors")) {
+	if (message.content.startsWith(prefix + "del-colors")) {
 		if(!message.member.hasPermission('ADMINISTRATOR')) return
 		let role = message.guild.roles.find('name', '32');
 		
@@ -1624,7 +1624,7 @@ client.on('message', message => {
 	client.on('message',message => {
 		
 			let args = message.content.split(' ').slice(1);
-	if (message.content.startsWith("$del-colors")) {
+	if (message.content.startsWith(prefix + "del-colors")) {
 		if(!message.member.hasPermission('ADMINISTRATOR')) return
 		let role = message.guild.roles.find('name', '33');
 		
@@ -1636,7 +1636,7 @@ client.on('message', message => {
 	client.on('message',message => {
 		
 			let args = message.content.split(' ').slice(1);
-	if (message.content.startsWith("$del-colors")) {
+	if (message.content.startsWith(prefix + "del-colors")) {
 		if(!message.member.hasPermission('ADMINISTRATOR')) return
 		let role = message.guild.roles.find('name', '34');
 		
@@ -1648,7 +1648,7 @@ client.on('message', message => {
 	client.on('message',message => {
 		
 			let args = message.content.split(' ').slice(1);
-	if (message.content.startsWith("$del-colors")) {
+	if (message.content.startsWith(prefix + "del-colors")) {
 		if(!message.member.hasPermission('ADMINISTRATOR')) return
 		let role = message.guild.roles.find('name', '35');
 		
@@ -1660,7 +1660,7 @@ client.on('message', message => {
 	client.on('message',message => {
 		
 			let args = message.content.split(' ').slice(1);
-	if (message.content.startsWith("$del-colors")) {
+	if (message.content.startsWith(prefix + "del-colors")) {
 		if(!message.member.hasPermission('ADMINISTRATOR')) return
 		let role = message.guild.roles.find('name', '36');
 		
@@ -1672,7 +1672,7 @@ client.on('message', message => {
 	client.on('message',message => {
 		
 			let args = message.content.split(' ').slice(1);
-	if (message.content.startsWith("$del-colors")) {
+	if (message.content.startsWith(prefix + "del-colors")) {
 		if(!message.member.hasPermission('ADMINISTRATOR')) return
 		let role = message.guild.roles.find('name', '37');
 		
@@ -1684,7 +1684,7 @@ client.on('message', message => {
 	client.on('message',message => {
 		
 			let args = message.content.split(' ').slice(1);
-	if (message.content.startsWith("$del-colors")) {
+	if (message.content.startsWith(prefix + "del-colors")) {
 		if(!message.member.hasPermission('ADMINISTRATOR')) return
 		let role = message.guild.roles.find('name', '38');
 		
@@ -1696,7 +1696,7 @@ client.on('message', message => {
 	client.on('message',message => {
 		
 			let args = message.content.split(' ').slice(1);
-	if (message.content.startsWith("$del-colors")) {
+	if (message.content.startsWith(prefix + "del-colors")) {
 		if(!message.member.hasPermission('ADMINISTRATOR')) return
 		let role = message.guild.roles.find('name', '39');
 		
@@ -1708,7 +1708,7 @@ client.on('message', message => {
 	client.on('message',message => {
 		
 			let args = message.content.split(' ').slice(1);
-	if (message.content.startsWith("$del-colors")) {
+	if (message.content.startsWith(prefix + "del-colors")) {
 		if(!message.member.hasPermission('ADMINISTRATOR')) return
 		let role = message.guild.roles.find('name', '40');
 		
@@ -1720,7 +1720,7 @@ client.on('message', message => {
 	client.on('message',message => {
 		
 			let args = message.content.split(' ').slice(1);
-	if (message.content.startsWith("$del-colors")) {
+	if (message.content.startsWith(prefix +"del-colors")) {
 		if(!message.member.hasPermission('ADMINISTRATOR')) return
 		let role = message.guild.roles.find('name', '41');
 		
@@ -1732,7 +1732,7 @@ client.on('message', message => {
 	client.on('message',message => {
 		
 			let args = message.content.split(' ').slice(1);
-	if (message.content.startsWith("$del-colors")) {
+	if (message.content.startsWith(prefix + "del-colors")) {
 		if(!message.member.hasPermission('ADMINISTRATOR')) return
 		let role = message.guild.roles.find('name', '42');
 		
@@ -1744,7 +1744,7 @@ client.on('message', message => {
 	client.on('message',message => {
 		
 			let args = message.content.split(' ').slice(1);
-	if (message.content.startsWith("$del-colors")) {
+	if (message.content.startsWith(prefix + "del-colors")) {
 		if(!message.member.hasPermission('ADMINISTRATOR')) return
 		let role = message.guild.roles.find('name', '43');
 		
@@ -1756,7 +1756,7 @@ client.on('message', message => {
 	client.on('message',message => {
 		
 			let args = message.content.split(' ').slice(1);
-	if (message.content.startsWith("$del-colors")) {
+	if (message.content.startsWith(prefix + "del-colors")) {
 		if(!message.member.hasPermission('ADMINISTRATOR')) return
 		let role = message.guild.roles.find('name', '44');
 		
@@ -1768,7 +1768,7 @@ client.on('message', message => {
 	client.on('message',message => {
 		
 			let args = message.content.split(' ').slice(1);
-	if (message.content.startsWith("$del-colors")) {
+	if (message.content.startsWith(prefix + "del-colors")) {
 		if(!message.member.hasPermission('ADMINISTRATOR')) return
 		let role = message.guild.roles.find('name', '45');
 		
@@ -1780,7 +1780,7 @@ client.on('message', message => {
 	client.on('message',message => {
 		
 			let args = message.content.split(' ').slice(1);
-	if (message.content.startsWith("$del-colors")) {
+	if (message.content.startsWith(prefix + "del-colors")) {
 		if(!message.member.hasPermission('ADMINISTRATOR')) return
 		let role = message.guild.roles.find('name', '46');
 		
@@ -1792,7 +1792,7 @@ client.on('message', message => {
 	client.on('message',message => {
 		
 			let args = message.content.split(' ').slice(1);
-	if (message.content.startsWith("$del-colors")) {
+	if (message.content.startsWith(prefix + "del-colors")) {
 		if(!message.member.hasPermission('ADMINISTRATOR')) return
 		let role = message.guild.roles.find('name', '47');
 		
@@ -1804,7 +1804,7 @@ client.on('message', message => {
 	client.on('message',message => {
 		
 			let args = message.content.split(' ').slice(1);
-	if (message.content.startsWith("$del-colors")) {
+	if (message.content.startsWith(prefix + "del-colors")) {
 		if(!message.member.hasPermission('ADMINISTRATOR')) return
 		let role = message.guild.roles.find('name', '48');
 		
@@ -1816,7 +1816,7 @@ client.on('message', message => {
 	client.on('message',message => {
 		
 			let args = message.content.split(' ').slice(1);
-	if (message.content.startsWith("$del-colors")) {
+	if (message.content.startsWith(prefix + "del-colors")) {
 		if(!message.member.hasPermission('ADMINISTRATOR')) return
 		let role = message.guild.roles.find('name', '49');
 		
@@ -1828,14 +1828,14 @@ client.on('message', message => {
 	client.on('message',message => {
 		
 			let args = message.content.split(' ').slice(1);
-	if (message.content.startsWith("$del-colors")) {
+	if (message.content.startsWith(prefix + "del-colors")) {
 		if(!message.member.hasPermission('ADMINISTRATOR')) return
 		let role = message.guild.roles.find('name', '50');
 		
 		role.delete()
 		
 			message.channel.sendMessage({embed: new Discord.RichEmbed()
-     .setColor('RED').setAuthor(`${message.author.username}'`, message.author.avatarURL).setDescription('``جاري حذف على الالوان |✅``')});
+     .setColor('RED').setAuthor(`${message.author.username}'`, message.author.avatarURL).setDescription('``Working on delete|✅``')});
 	}
 	});
 
